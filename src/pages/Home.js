@@ -24,6 +24,7 @@ export default function Home({ onNavbarStateChange }) {
   const heroRef = useRef(null);
   const sectionThreeRef = useRef(null);
   const footerRef = useRef(null);
+  const videoRef = useRef(null);
   const navigate = useNavigate();
   const [heroVisible, setHeroVisible] = useState(true);
   const [navbarWhite, setNavbarWhite] = useState(false);
@@ -51,6 +52,31 @@ export default function Home({ onNavbarStateChange }) {
     });
     // We intentionally run this only once on mount
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Programmatic video play fallback for mobile browsers
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Attempt to play immediately
+      const playVideo = () => {
+        video.play().catch(() => {
+          // Autoplay was prevented, silently fail
+        });
+      };
+      
+      // Try playing when video data is loaded
+      video.addEventListener('loadeddata', playVideo);
+      video.addEventListener('canplay', playVideo);
+      
+      // Also try immediately in case video is already loaded
+      playVideo();
+      
+      return () => {
+        video.removeEventListener('loadeddata', playVideo);
+        video.removeEventListener('canplay', playVideo);
+      };
+    }
   }, []);
 
   useEffect(() => {
@@ -116,11 +142,12 @@ export default function Home({ onNavbarStateChange }) {
     <>
       <section className="hero-section" ref={heroRef}>
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          webkit-playsinline="true"
+          preload="auto"
           className="hero-video"
         >
           <source
