@@ -1,0 +1,215 @@
+.our-work-section {
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  position: relative;
+  margin-top: 72px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.our-work-container {
+  max-width: min(1920px, 100%);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.our-work-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.our-work-title {
+  font-family: "SuisseIntl-SemiBold", Arial, sans-serif;
+  font-size: 62px;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.our-work-subtitle {
+  font-family: "BasisGrotesqueArabicPro-Medium", Arial, sans-serif;
+  font-size: 18px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  row-gap: 3rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #ececec;
+  box-sizing: border-box;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-category {
+  font-family: "SuisseIntl-Regular", Arial, sans-serif;
+  font-size: 12px;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-title {
+  font-family: "SuisseIntl-SemiBold", Arial, sans-serif;
+  font-size: 24px;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.project-description {
+  font-family: "BasisGrotesqueArabicPro-Medium", Arial, sans-serif;
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.project-link {
+  font-family: "SuisseIntl-SemiBold", Arial, sans-serif;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  width: fit-content;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .our-work-title {
+    font-size: 48px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .our-work-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .our-work-section {
+    padding: 80px 0;
+  }
+
+  .our-work-container {
+    gap: 40px;
+    padding: 0 1.5rem;
+  }
+
+  .our-work-title {
+    font-size: 36px;
+  }
+
+  .our-work-subtitle {
+    font-size: 16px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-work-section {
+    padding: 60px 0;
+  }
+
+  .our-work-container {
+    padding: 0 1rem;
+    gap: 32px;
+  }
+
+  .our-work-title {
+    font-size: 32px;
+  }
+
+  .projects-grid {
+    gap: 24px;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-work-section {
+    padding: 50px 0;
+  }
+
+  .our-work-container {
+    padding: 0 1rem;
+    gap: 28px;
+  }
+
+  .our-work-title {
+    font-size: 28px;
+  }
+
+  .projects-grid {
+    gap: 20px;
+    row-gap: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+}

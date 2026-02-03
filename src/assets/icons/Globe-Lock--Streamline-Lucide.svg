@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.5 -1.5 48 48" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" id="Globe-Lock--Streamline-Lucide" height="48" width="48">
+  <desc>
+    Globe Lock Streamline Icon: https://streamlinehq.com
+  </desc>
+  <path d="M29.41125 28.125A27.1875 27.1875 0 0 1 22.5 41.25a27.1875 27.1875 0 0 1 0 -37.5 18.75 18.75 0 1 0 17.89125 24.375" stroke-width="3"></path>
+  <path d="M3.75 22.5h15.9375" stroke-width="3"></path>
+  <path d="M37.5 11.25V7.5a3.75 3.75 0 1 0 -7.5 0v3.75" stroke-width="3"></path>
+  <path d="M28.125 11.25h11.25s1.875 0 1.875 1.875v5.625s0 1.875 -1.875 1.875h-11.25s-1.875 0 -1.875 -1.875V13.125s0 -1.875 1.875 -1.875" stroke-width="3"></path>
+</svg>

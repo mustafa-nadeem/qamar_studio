@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  overscroll-behavior: contain;
+  font-family: 'SuisseIntl-SemiBold', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  letter-spacing: -.03em;
+  box-sizing: border-box;
+  /* iOS Safari fixes */
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
